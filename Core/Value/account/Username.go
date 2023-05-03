@@ -1,4 +1,4 @@
-package Value
+package account
 
 import (
 	"github.com/GoDriveApp/GoDriveApi/Core/Err"
