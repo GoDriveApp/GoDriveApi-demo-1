@@ -5,13 +5,25 @@ import (
 )
 
 type Account struct {
+	BaseEntity
 	username     Val.Username
 	email        Val.Email
 	passwordHash Val.PasswordHash
 }
 
-func NewAccount(username Val.Username, email Val.Email, passwordHash Val.PasswordHash) *Account {
-	return &Account{username, email, passwordHash}
+func NewAccount(
+	id string,
+	username Val.Username,
+	email Val.Email,
+	passwordHash Val.PasswordHash) *Account {
+	return &Account{
+		BaseEntity: BaseEntity{
+			id: id,
+		},
+		username:     username,
+		email:        email,
+		passwordHash: passwordHash,
+	}
 }
 
 func (acc *Account) GetUsername() Val.Username {
