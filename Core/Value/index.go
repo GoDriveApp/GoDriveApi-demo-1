@@ -9,3 +9,10 @@ type (
 	PasswordHash = account.PasswordHash
 	Password     = account.Password
 )
+
+var (
+	NewUsername     = account.NewUsername
+	NewEmail        = account.NewEmail
+	NewPasswordHash = account.NewPasswordHash
+	NewPassword     = account.NewPassword
+)
