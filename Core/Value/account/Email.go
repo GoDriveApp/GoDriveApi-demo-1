@@ -23,3 +23,7 @@ func NewEmail(value string) (error, Email) {
 func isEmailValueValid(value string) bool {
 	return emailRegex.MatchString(value)
 }
+
+func (eml Email) GetValue() string {
+	return eml.value
+}

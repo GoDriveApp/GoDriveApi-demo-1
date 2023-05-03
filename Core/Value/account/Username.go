@@ -23,3 +23,7 @@ func NewUsername(value string) (error, Username) {
 func isUsernameValueValid(value string) bool {
 	return usernameRegex.MatchString(value)
 }
+
+func (usn Username) GetValue() string {
+	return usn.value
+}

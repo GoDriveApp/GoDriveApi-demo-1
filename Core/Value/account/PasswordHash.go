@@ -23,3 +23,7 @@ func NewPasswordHash(value string) (error, PasswordHash) {
 func isPasswordHashValueValid(value string) bool {
 	return passwordHashRegex.MatchString(value)
 }
+
+func (psh PasswordHash) GetValue() string {
+	return psh.value
+}

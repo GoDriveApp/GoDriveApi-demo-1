@@ -23,3 +23,7 @@ func NewPassword(value string) (error, Password) {
 func isPasswordValueValid(value string) bool {
 	return passwordRegex.MatchString(value)
 }
+
+func (pss Password) GetValue() string {
+	return pss.value
+}
