@@ -7,4 +7,5 @@ type (
 	Username     = account.Username
 	Email        = account.Email
 	PasswordHash = account.PasswordHash
+	Password     = account.Password
 )
