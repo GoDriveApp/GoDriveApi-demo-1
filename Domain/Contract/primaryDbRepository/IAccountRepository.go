@@ -1,9 +1,12 @@
 package primaryDbRepository
 
-import "github.com/GoDriveApp/GoDriveApi/Core/Value"
+import (
+	"github.com/GoDriveApp/GoDriveApi/Core/Entity"
+	"github.com/GoDriveApp/GoDriveApi/Core/Value"
+)
 
 type IAccountRepository interface {
-	IPrimaryDbRepository
+	IPrimaryDbRepository[Entity.Account]
 	IsEmailExist(email Value.Email) bool
 	IsUsernameExist(username Value.Username) bool
 }
