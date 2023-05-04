@@ -1,2 +1,2 @@
-github.com/GoDriveApp/GoDriveApi/Core v0.0.0-20230503220858-8e03fd97b324 h1:qlzKkuyOE2pAtjQ4q/p8e6oO5uzK6OWXb9Vr8I7++gg=
-github.com/GoDriveApp/GoDriveApi/Core v0.0.0-20230503220858-8e03fd97b324/go.mod h1:R+vufeR0Evzl7+mY9TNGdxX6epyVbb5NDHCfA93pQrA=
+github.com/google/uuid v1.3.0 h1:t6JiXgmwXMjEs8VusXIJk2BXHsn+wx8BZdTaoZ5fu7I=
+github.com/google/uuid v1.3.0/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=
