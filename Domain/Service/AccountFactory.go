@@ -3,7 +3,7 @@ package Service
 import (
 	"github.com/GoDriveApp/GoDriveApi/Core/Entity"
 	Val "github.com/GoDriveApp/GoDriveApi/Core/Value"
-	Repo "github.com/GoDriveApp/GoDriveApi/Domain/Contract/primaryDbRepository"
+	Repo "github.com/GoDriveApp/GoDriveApi/Domain/Contract"
 	"github.com/GoDriveApp/GoDriveApi/Domain/Err"
 	"github.com/google/uuid"
 )
