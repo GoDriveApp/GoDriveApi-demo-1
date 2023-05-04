@@ -17,9 +17,7 @@ func NewAccount(
 	email Val.Email,
 	passwordHash Val.PasswordHash) *Account {
 	return &Account{
-		BaseEntity: BaseEntity{
-			id: id,
-		},
+		BaseEntity:   NewBaseEntity(id),
 		username:     username,
 		email:        email,
 		passwordHash: passwordHash,
