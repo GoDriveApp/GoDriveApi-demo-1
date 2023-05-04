@@ -3,33 +3,33 @@ package entities
 import "time"
 
 type BaseEntity struct {
-	id         string    `gorm:"primaryKey"`
-	insertedAt time.Time `gorm:"autoCreateTime"`
-	updatedAt  time.Time `gorm:"autoUpdateTime"`
+	Id         string    `gorm:"primaryKey"`
+	InsertedAt time.Time `gorm:"autoCreateTime"`
+	UpdatedAt  time.Time `gorm:"autoUpdateTime"`
 }
 
 func NewBaseEntity(id string) BaseEntity {
 	return BaseEntity{
-		id: id,
+		Id: id,
 	}
 }
 
 func (be *BaseEntity) GetId() string {
-	return be.id
+	return be.Id
 }
 
 func (be *BaseEntity) GetInsertedAt() time.Time {
-	return be.insertedAt
+	return be.InsertedAt
 }
 
 func (be *BaseEntity) SetInsertedAt(insertedAt time.Time) {
-	be.insertedAt = insertedAt
+	be.InsertedAt = insertedAt
 }
 
 func (be *BaseEntity) GetUpdatedAt() time.Time {
-	return be.updatedAt
+	return be.UpdatedAt
 }
 
 func (be *BaseEntity) SetUpdatedAt(updatedAt time.Time) {
-	be.updatedAt = updatedAt
+	be.UpdatedAt = updatedAt
 }

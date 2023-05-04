@@ -1,6 +1,8 @@
 package account
 
 import (
+	"database/sql/driver"
+	"errors"
 	"github.com/GoDriveApp/GoDriveApi/core/errs"
 	"regexp"
 )
@@ -26,4 +28,16 @@ func isEmailValueValid(value string) bool {
 
 func (eml Email) GetValue() string {
 	return eml.value
+}
+
+func (eml *Email) Scan(value interface{}) error {
+	if str, ok := value.(string); ok {
+		eml.value = str
+		return nil
+	}
+	return errors.New("failed to scan Email from database")
+}
+
+func (eml Email) Value() (driver.Value, error) {
+	return eml.value, nil
 }

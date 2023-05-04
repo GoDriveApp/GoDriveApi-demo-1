@@ -6,32 +6,32 @@ import (
 
 type Account struct {
 	BaseEntity
-	username     val.Username `gorm:"uniqueIndex"`
-	email        val.Email    `gorm:"uniqueIndex"`
-	passwordHash val.PasswordHash
+	Username     val.Username     `gorm:"uniqueIndex;type:varchar(30)"`
+	Email        val.Email        `gorm:"uniqueIndextype:varchar"`
+	PasswordHash val.PasswordHash `gorm:"varchar"`
 }
 
 func NewAccount(id string, username val.Username, email val.Email, passwordHash val.PasswordHash) *Account {
 	return &Account{
 		BaseEntity:   NewBaseEntity(id),
-		username:     username,
-		email:        email,
-		passwordHash: passwordHash,
+		Username:     username,
+		Email:        email,
+		PasswordHash: passwordHash,
 	}
 }
 
 func (acc *Account) GetUsername() val.Username {
-	return acc.username
+	return acc.Username
 }
 
 func (acc *Account) GetEmail() val.Email {
-	return acc.email
+	return acc.Email
 }
 
 func (acc *Account) GetPasswordHash() val.PasswordHash {
-	return acc.passwordHash
+	return acc.PasswordHash
 }
 
 func (acc *Account) SetPasswordHash(passwordHash val.PasswordHash) {
-	acc.passwordHash = passwordHash
+	acc.PasswordHash = passwordHash
 }
