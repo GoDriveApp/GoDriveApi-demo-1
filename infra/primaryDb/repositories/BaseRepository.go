@@ -2,25 +2,25 @@ package repositories
 
 import ent "github.com/GoDriveApp/GoDriveApi/core/entities"
 
-type Repository[T ent.BaseEntity] struct {
+type BaseRepository[T ent.BaseEntity] struct {
 }
 
-func (r *Repository[T]) Save(entity T) {
+func (r *BaseRepository[T]) Save(entity T) {
 	//TODO implement me
 	panic("implement me")
 }
 
-func (r *Repository[T]) Update(entity T) {
+func (r *BaseRepository[T]) Update(entity T) {
 	//TODO implement me
 	panic("implement me")
 }
 
-func (r *Repository[T]) Delete(entity T) {
+func (r *BaseRepository[T]) Delete(entity T) {
 	//TODO implement me
 	panic("implement me")
 }
 
-func (r *Repository[T]) GetById(id string) *T {
+func (r *BaseRepository[T]) GetById(id string) *T {
 	//TODO implement me
 	panic("implement me")
 }

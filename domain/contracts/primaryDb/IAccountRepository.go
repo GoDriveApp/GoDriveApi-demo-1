@@ -6,7 +6,7 @@ import (
 )
 
 type IAccountRepository interface {
-	IRepository[ent.Account]
+	IBaseRepository[ent.Account]
 	IsEmailExist(email val.Email) bool
 	IsUsernameExist(username val.Username) bool
 }
