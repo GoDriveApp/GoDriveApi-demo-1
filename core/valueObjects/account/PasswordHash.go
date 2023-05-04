@@ -1,7 +1,7 @@
 package account
 
 import (
-	"github.com/GoDriveApp/GoDriveApi/core/Err"
+	"github.com/GoDriveApp/GoDriveApi/core/errs"
 	"regexp"
 )
 
@@ -15,7 +15,7 @@ type PasswordHash struct {
 
 func NewPasswordHash(value string) (error, PasswordHash) {
 	if !isPasswordHashValueValid(value) {
-		return Err.ThrowInvalidPasswordHashErr(value), PasswordHash{}
+		return errs.ThrowInvalidPasswordHashErr(value), PasswordHash{}
 	}
 	return nil, PasswordHash{value}
 }

@@ -1,7 +1,7 @@
 package account
 
 import (
-	"github.com/GoDriveApp/GoDriveApi/core/Err"
+	"github.com/GoDriveApp/GoDriveApi/core/errs"
 	"regexp"
 )
 
@@ -15,7 +15,7 @@ type Email struct {
 
 func NewEmail(value string) (error, Email) {
 	if !isEmailValueValid(value) {
-		return Err.ThrowInvalidEmailErr(value), Email{}
+		return errs.ThrowInvalidEmailErr(value), Email{}
 	}
 	return nil, Email{value}
 }

@@ -1,7 +1,7 @@
 package account
 
 import (
-	"github.com/GoDriveApp/GoDriveApi/core/Err"
+	"github.com/GoDriveApp/GoDriveApi/core/errs"
 	"regexp"
 )
 
@@ -15,7 +15,7 @@ type Password struct {
 
 func NewPassword(value string) (error, Password) {
 	if !isPasswordValueValid(value) {
-		return Err.ThrowInvalidPasswordErr(value), Password{}
+		return errs.ThrowInvalidPasswordErr(value), Password{}
 	}
 	return nil, Password{value}
 }

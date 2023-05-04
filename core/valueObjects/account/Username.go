@@ -1,7 +1,7 @@
 package account
 
 import (
-	"github.com/GoDriveApp/GoDriveApi/core/Err"
+	"github.com/GoDriveApp/GoDriveApi/core/errs"
 	"regexp"
 )
 
@@ -15,7 +15,7 @@ type Username struct {
 
 func NewUsername(value string) (error, Username) {
 	if !isUsernameValueValid(value) {
-		return Err.ThrowInvalidUsernameErr(value), Username{}
+		return errs.ThrowInvalidUsernameErr(value), Username{}
 	}
 	return nil, Username{value}
 }
