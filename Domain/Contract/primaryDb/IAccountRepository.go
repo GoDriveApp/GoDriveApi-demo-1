@@ -1,4 +1,4 @@
-package primaryDbRepository
+package primaryDb
 
 import (
 	"github.com/GoDriveApp/GoDriveApi/Core/Entity"

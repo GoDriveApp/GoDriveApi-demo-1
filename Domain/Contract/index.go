@@ -1,9 +1,9 @@
 package Contract
 
 import (
-	"github.com/GoDriveApp/GoDriveApi/Domain/Contract/primaryDbRepository"
+	"github.com/GoDriveApp/GoDriveApi/Domain/Contract/primaryDb"
 )
 
 type (
-	IAccountRepository = primaryDbRepository.IAccountRepository
+	IAccountRepository = primaryDb.IAccountRepository
 )
