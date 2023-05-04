@@ -1,17 +1,17 @@
 package entities
 
 import (
-	Val "github.com/GoDriveApp/GoDriveApi/core/valueObjects"
+	val "github.com/GoDriveApp/GoDriveApi/core/valueObjects"
 )
 
 type Account struct {
 	BaseEntity
-	username     Val.Username `gorm:"uniqueIndex"`
-	email        Val.Email    `gorm:"uniqueIndex"`
-	passwordHash Val.PasswordHash
+	username     val.Username `gorm:"uniqueIndex"`
+	email        val.Email    `gorm:"uniqueIndex"`
+	passwordHash val.PasswordHash
 }
 
-func NewAccount(id string, username Val.Username, email Val.Email, passwordHash Val.PasswordHash) *Account {
+func NewAccount(id string, username val.Username, email val.Email, passwordHash val.PasswordHash) *Account {
 	return &Account{
 		BaseEntity:   NewBaseEntity(id),
 		username:     username,
@@ -20,18 +20,18 @@ func NewAccount(id string, username Val.Username, email Val.Email, passwordHash 
 	}
 }
 
-func (acc *Account) GetUsername() Val.Username {
+func (acc *Account) GetUsername() val.Username {
 	return acc.username
 }
 
-func (acc *Account) GetEmail() Val.Email {
+func (acc *Account) GetEmail() val.Email {
 	return acc.email
 }
 
-func (acc *Account) GetPasswordHash() Val.PasswordHash {
+func (acc *Account) GetPasswordHash() val.PasswordHash {
 	return acc.passwordHash
 }
 
-func (acc *Account) SetPasswordHash(passwordHash Val.PasswordHash) {
+func (acc *Account) SetPasswordHash(passwordHash val.PasswordHash) {
 	acc.passwordHash = passwordHash
 }
