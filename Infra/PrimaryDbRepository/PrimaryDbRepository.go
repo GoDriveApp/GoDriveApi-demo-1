@@ -23,6 +23,6 @@ func (repo *PrimaryDbRepository[T]) Delete(entity T) {
 
 }
 
-func (repo *PrimaryDbRepository[T]) GetById(id string) {
-
+func (repo *PrimaryDbRepository[T]) GetById(id string) *T {
+	return nil
 }

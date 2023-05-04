@@ -6,5 +6,5 @@ type IPrimaryDbRepository[T Entity.BaseEntity] interface {
 	Save(entity T)
 	Update(entity T)
 	Delete(entity T)
-	GetById(id string)
+	GetById(id string) *T
 }
