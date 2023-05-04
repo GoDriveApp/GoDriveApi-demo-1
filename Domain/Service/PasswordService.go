@@ -12,6 +12,10 @@ type (
 	}
 )
 
+func NewPasswordService() *PasswordService {
+	return &PasswordService{}
+}
+
 func (pse PasswordService) Hash(password Value.Password) Value.PasswordHash {
 	//TODO hash password
 	_, passwordHash := Value.NewPasswordHash(password.GetValue())
