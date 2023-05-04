@@ -19,6 +19,10 @@ type (
 	}
 )
 
+func NewAccountFactory(accRepo Repo.IAccountRepository, passwordService IPasswordService) *AccountFactory {
+	return &AccountFactory{accRepo, passwordService}
+}
+
 func (acf *AccountFactory) CreateNewAccount(username Val.Username, email Val.Email, password Val.Password) (error, *Entity.Account) {
 	if acf.accRepo.IsUsernameExist(username) {
 		return Err.ThrowDuplicatedUsernameErr(username), nil
